@@ -16,7 +16,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
-@Component
+//@Component
 //genera costruttore con parametri per tutti i campi final o NonNull quindi non avremo bisogno di @Autowired
 // perché il costruttore creato farà constructor-based dependency injection.
 @RequiredArgsConstructor

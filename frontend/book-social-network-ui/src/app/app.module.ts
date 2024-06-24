@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,7 +11,11 @@ import { CodeInputModule } from 'angular-code-input';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpTokenInterceptor } from './services/interceptor/http-token.interceptor';
 import { FormsModule } from '@angular/forms';
+import { KeycloakService } from './services/keycloak/keycloak.service';
 
+export function kcFactory(kcService: KeycloakService) {
+  return () => kcService.init();
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +31,11 @@ import { FormsModule } from '@angular/forms';
     NgbModule,
     FormsModule
   ],
-  providers: [HttpClient, { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true}],
+  providers: [
+    HttpClient,
+    { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true},
+    { provide: APP_INITIALIZER, deps: [KeycloakService], useFactory: kcFactory, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

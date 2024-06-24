@@ -1,0 +1,23 @@
+
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+y
+Ibackend/book-social-network/src/main/resources/application-dev.properties,c\f\cfbef0c45dd8700229989a717bc34507587e57b2
+ë
+abackend/book-social-network/src/main/java/com/kekkobarr/booksocialnetwork/email/EmailService.java,4\9\49cfaeed1e3e57f16717f1c4150aac68cb0c289c
+^
+.backend/book-social-network/docker-compose.yml,0\6\0673c1af29877323b17fa72c2ae0c9fbe0f36984
+ê
+`backend/book-social-network/src/main/java/com/kekkobarr/booksocialnetwork/config/BeanConfig.java,6\9\69243abc97a1c8034070cae615dc611be4dff94e
+S
+#backend/book-social-network/pom.xml,d\c\dc5409b1db4898837d37a53d2c6872fb86a0b5da
+ñ
+fbackend/book-social-network/src/main/java/com/kekkobarr/booksocialnetwork/security/SecurityConfig.java,3\8\385c1d07d927a7344d66c412843cb369ecbeca88
+û
+nbackend/book-social-network/src/main/java/com/kekkobarr/booksocialnetwork/BookSocialNetworkApiApplication.java,3\5\353108bdf781c29d602043c92ec2f9acbd5c5999
+G
+book-social-network.iml,6\8\68c1463c07bb603217372ae89b312b321cdd50af
+}
+Mfrontend/book-social-network-ui/src/app/services/keycloak/keycloak.service.ts,1\8\1872aaed5b405d646a3ad2da819e4e619bb49d89
+R
+"keycloak/realm/book-social-network,d\8\d8b709c67c505c33ecc9639060ecb6f3d432f94f

@@ -26,6 +26,7 @@
     "angular-code-input": "^2.0.0",
     "angular-jwt": "github:auth0/angular-jwt",
     "bootstrap": "^5.2.3",
+    "keycloak-js": "^24.0.2",
     "ng-openapi-gen": "^0.51.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

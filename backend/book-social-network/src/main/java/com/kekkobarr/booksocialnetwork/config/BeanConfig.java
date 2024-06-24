@@ -28,29 +28,10 @@ import java.util.Properties;
 @EnableJpaRepositories(basePackages = "com.kekkobarr.booksocialnetwork")
 public class BeanConfig {
 
-    private final UserDetailsService userDetailsService;
 
     @Bean
-    public AuthenticationProvider authenticationProvider(){
-        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-        authProvider.setUserDetailsService(userDetailsService);
-        authProvider.setPasswordEncoder(passwordEncoder());
-        return authProvider;
-    }
-
-    @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
-        return config.getAuthenticationManager();
-    }
-
-    @Bean
-    public AuditorAware<Integer> auditorAware(){
+    public AuditorAware<String> auditorAware(){
         return new ApplicationAuditAware();
-    }
-
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
     }
 
     @Bean

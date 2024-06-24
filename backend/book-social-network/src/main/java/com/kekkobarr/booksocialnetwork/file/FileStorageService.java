@@ -22,7 +22,7 @@ public class FileStorageService {
     @Value("${application.file.uploads.photos-output-path}")
     private String fileUploadPath = "./uploads";
 
-    public String saveFile(@NonNull MultipartFile sourceFile, @NonNull Book book, @NonNull Integer userId) {
+    public String saveFile(@NonNull MultipartFile sourceFile, @NonNull Book book, @NonNull String userId) { //@NonNull Integer userId
         final String fileUploadSubPath = "users" + File.separator + userId;
         return uploadFile(sourceFile, fileUploadSubPath);
     }

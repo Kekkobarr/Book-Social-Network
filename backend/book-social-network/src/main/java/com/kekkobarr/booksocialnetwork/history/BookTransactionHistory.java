@@ -3,6 +3,7 @@ package com.kekkobarr.booksocialnetwork.history;
 import com.kekkobarr.booksocialnetwork.book.Book;
 import com.kekkobarr.booksocialnetwork.common.BaseEntity;
 import com.kekkobarr.booksocialnetwork.user.User;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -21,9 +22,12 @@ import lombok.experimental.SuperBuilder;
 public class BookTransactionHistory extends BaseEntity {
 
     //user ralationship
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+//    @ManyToOne
+//    @JoinColumn(name = "user_id")
+//    private User user;
+
+    @Column(name = "user_id")
+    private  String userId;
 
     //book ralationship
     @ManyToOne

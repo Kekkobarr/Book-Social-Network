@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { KeycloakService } from 'src/app/services/keycloak/keycloak.service';
 import { AuthenticationRequest } from 'src/app/services/models/authentication-request';
 import { AuthenticationService } from 'src/app/services/services/authentication.service';
 import { TokenService } from 'src/app/services/token/token.service';
@@ -11,7 +12,14 @@ import { TokenService } from 'src/app/services/token/token.service';
 })
 export class LoginComponent {
 
-  authRequest: AuthenticationRequest = {email:'', password:''};
+constructor(private keycloakService: KeycloakService) {}
+
+async ngOnInit(): Promise<void> {
+  await this.keycloakService.init();
+  await this.keycloakService.login();
+}
+
+/*   authRequest: AuthenticationRequest = {email:'', password:''};
   errorMsg: Array<string> = [];
 
   constructor(private router: Router, private authService: AuthenticationService, private tokenService: TokenService){
@@ -39,6 +47,6 @@ export class LoginComponent {
 
   register():void | undefined{
     this.router.navigate(['register'])
-  }
+  } */
 
 }
