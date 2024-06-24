@@ -42,7 +42,7 @@ public class EmailService {
         Context context = new Context();
         context.setVariables(properties);
 
-        helper.setFrom("kekkobarr@gmail.com");
+        helper.setFrom("my_mail");
         helper.setTo(to);
         helper.setSubject(subject);
 
